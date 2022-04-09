@@ -1,4 +1,5 @@
 __pycache__/app.cpython-38.pyc
+venv/*
 venv/lib64
 venv/pyvenv.cfg
 venv/bin/easy_install
