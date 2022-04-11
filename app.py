@@ -11,7 +11,7 @@ app = Flask(__name__)
 def index():
   #conn_str=os.environ.get('MYSQLCONNSTR_PRIMARY_CONNECTION_STRING','ei löytynny')
   
-  return 'Web App with Python Flask!'
+  return 'Web App with Python Flask! TEST'
 
 @app.route('/insert')
 def insert():
