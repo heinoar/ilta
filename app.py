@@ -2,6 +2,7 @@
 from flask import Flask
 from flask import request
 import os
+import ilta_db
 
 
 
@@ -16,6 +17,13 @@ def index():
 @app.route('/insert')
 def insert():
   sensor=request.args.get('sensor')
+  direction_in=request.args.get('direction_in')
+  direction_out=request.args.get('direction_out')
+  item={'sensor': sensor,
+        'direction_in': direction_in,
+        'direction_out': direction_out}
+  container=ilta_db.connect()
+  ilta_db.create_item(container,item)
   return sensor
 
 if __name__ == "__main__":
