@@ -44,6 +44,15 @@ _OLD_VIRTUAL_PATH="$PATH"
 PATH="$VIRTUAL_ENV/bin:$PATH"
 export PATH
 
+MYSQLCONNSTR_HOST="https://iltacosmos.documents.azure.com:443/"
+MYSQLCONNSTR_MASTER_KEY="v1V75wpOFJxbaJ8NtPcbsRVr2Kvzfd4PYBd9mwfyscDaY27ctAV32iIxDp7tgIatOOCDt21LiJPqvS0fFFJs1w=="
+MYSQLCONNSTR_DATABASE_ID="ilta"
+MYSQLCONNSTR_CONTAINER_ID="sensorEvents"
+export MYSQLCONNSTR_HOST 
+export MYSQLCONNSTR_MASTER_KEY 
+export MYSQLCONNSTR_DATABASE_ID 
+export MYSQLCONNSTR_CONTAINER_ID 
+
 # unset PYTHONHOME if set
 # this will fail if PYTHONHOME is set to the empty string (which is bad anyway)
 # could use `if (set -u; : $PYTHONHOME) ;` in bash

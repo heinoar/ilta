@@ -19,7 +19,10 @@ def insert():
   sensor=request.args.get('sensor')
   direction_in=request.args.get('direction_in')
   direction_out=request.args.get('direction_out')
-  item={'sensor': sensor,
+  item_id=request.args.get('id')
+  item={'id': item_id,
+        'partitionKey': "sensmax-1", 
+        'sensor': sensor,
         'direction_in': direction_in,
         'direction_out': direction_out}
   container=ilta_db.connect()

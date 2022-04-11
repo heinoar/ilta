@@ -34,7 +34,7 @@ def connect():
             print('Container with id \'{0}\' was found'.format(CONTAINER_ID))
   except exceptions.CosmosHttpResponseError as e:
         print('\nDatabase creation has caught an error. {0}'.format(e.message))
-        return None
+    
 
   finally:
         print("\nDatabase creation success")
@@ -42,6 +42,7 @@ def connect():
 
 
 def create_item(container,item):
-    print('\nCreating Items\n')
+    print('\nCreating Items\n'+str(item))
+    print(container)
     container.create_item(body=item)
 
