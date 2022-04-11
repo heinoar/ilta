@@ -3,6 +3,7 @@ from flask import Flask
 from flask import request
 import os
 import ilta_db
+import json
 
 
 
@@ -28,6 +29,12 @@ def insert():
   container=ilta_db.connect()
   ilta_db.create_item(container,item)
   return sensor
+
+@app.route('/read')
+def read():
+  container=ilta_db.connect()
+  data=ilta_db.read_items(container)
+  return str(data)
 
 if __name__ == "__main__":
   app.run()

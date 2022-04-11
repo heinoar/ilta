@@ -46,3 +46,14 @@ def create_item(container,item):
     print(container)
     container.create_item(body=item)
 
+def read_items(container):
+    print('\nReading all items in a container\n')
+    item_list = list(container.read_all_items(max_item_count=10))
+
+    print('Found {0} items'.format(item_list.__len__()))
+
+    for doc in item_list:
+        print('Item Id: {0}'.format(doc.get('id')))
+    return str(item_list)
+
+
