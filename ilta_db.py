@@ -1,3 +1,4 @@
+
 import os
 import azure.cosmos.documents as documents
 import azure.cosmos.cosmos_client as cosmos_client
