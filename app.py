@@ -35,5 +35,10 @@ def read():
   data=ilta_db.read_items(container)
   return str(data)
 
+@app.route('/test')
+def test():
+  return index.html
+ 
+
 if __name__ == "__main__":
   app.run()
